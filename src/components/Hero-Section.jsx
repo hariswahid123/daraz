@@ -1,34 +1,18 @@
 import React, { useEffect, useState } from "react";
+import LocalShippingIcon from '@mui/icons-material/LocalShipping';
+import ConfirmationNumberIcon from '@mui/icons-material/ConfirmationNumber';
+import WhatshotIcon from '@mui/icons-material/Whatshot';
+import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
+import HourglassBottomIcon from '@mui/icons-material/HourglassBottom';
+import StarIcon from '@mui/icons-material/Star';
 
 const slides = [
-  {
-    title: "SMART ACCESSORIES",
-    subtitle: "SAVE ON ELECTRONIC ITEMS",
- },
-  {
-    title: "BEST DEALS",
-    subtitle: "UP TO 50% OFF",
-  },
-  {
-    title: "NEW ARRIVALS",
-    subtitle: "SHOP TRENDING ITEMS",
-  },
-
-  {
-    title: "FLASH SALE",
-    subtitle: "HURRY BEFORE IT’S GONE"
-  },
-
-  {
-    title: "HOT DEALS",
-    subtitle: "LIMITED TIME OFFER"
-  },
-
-  {
-    title: "FRESH PICKS",
-    subtitle: "JUST LANDED"
-  },
-
+  { title: "SMART ACCESSORIES", subtitle: "SAVE ON ELECTRONIC ITEMS" },
+  { title: "BEST DEALS", subtitle: "UP TO 50% OFF" },
+  { title: "NEW ARRIVALS", subtitle: "SHOP TRENDING ITEMS" },
+  { title: "FLASH SALE", subtitle: "HURRY BEFORE IT’S GONE" },
+  { title: "HOT DEALS", subtitle: "LIMITED TIME OFFER" },
+  { title: "FRESH PICKS", subtitle: "JUST LANDED" },
 ];
 
 const Hero = () => {
@@ -109,40 +93,40 @@ const Hero = () => {
             <div className="bg-gradient-to-b from-orange-400 to-pink-500 text-white p-3 rounded-md">
               <p className="text-sm font-semibold">TRY DARAZ APP</p>
               <p className="text-xs mt-1">Download the App now</p>
-              <div className="bg-white text-black mt-3 p-2 rounded text-xs">⭐ 4.8 Rated</div>
+              <div className="bg-white text-black mt-3 p-2 rounded text-xs flex items-center gap-1">
+                <StarIcon fontSize="small" className="text-yellow-400" />
+                4.8 Rated
+              </div>
             </div>
 
             <ul className="text-sm space-y-2">
-              <li>🚚 Free Shipping</li>
-              <li>🎟 Exclusive Vouchers</li>
-              <li>🔥 Sales</li>
-              <li>💰 50% Discount</li>
-              <li>⏳ Limited Offers</li>
+              <li className="flex items-center gap-2"><LocalShippingIcon fontSize="small" /> Free Shipping</li>
+              <li className="flex items-center gap-2"><ConfirmationNumberIcon fontSize="small" /> Exclusive Vouchers</li>
+              <li className="flex items-center gap-2"><WhatshotIcon fontSize="small" /> Sales</li>
+              <li className="flex items-center gap-2"><MonetizationOnIcon fontSize="small" /> 50% Discount</li>
+              <li className="flex items-center gap-2"><HourglassBottomIcon fontSize="small" /> Limited Offers</li>
             </ul>
 
             <img src="/assets/app.png" alt="" className="w-full mt-3 cursor-pointer" />
           </div>
         </div>
 
-  <div className="mt-6 w-full flex justify-center">
-  <div className="w-full md:w-[1150px] rounded-lg overflow-hidden cursor-pointer relative">
-    <div
-      className="w-full h-[100px] flex items-center justify-between px-6 md:px-10"
-      style={{ background: "linear-gradient(90deg, #4b0082, #c71585)" }}
-    >
-      <div className="text-white">
-        <h2 className="text-xl md:text-2xl font-extrabold">UP TO 50% OFF</h2>
-        <p className="text-sm md:text-lg mt-1">LIMITED TIME OFFER - SHOP NOW!</p>
-      </div>
-      <button className="bg-yellow-400 text-black px-6 py-2 rounded-full font-semibold">
-        Shop Now
-      </button>
-    </div>
-  </div>
-</div>
-
-
-
+        <div className="mt-6 w-full flex justify-center">
+          <div className="w-full md:w-[1150px] rounded-lg overflow-hidden cursor-pointer relative">
+            <div
+              className="w-full h-[100px] flex items-center justify-between px-6 md:px-10"
+              style={{ background: "linear-gradient(90deg, #4b0082, #c71585)" }}
+            >
+              <div className="text-white">
+                <h2 className="text-xl md:text-2xl font-extrabold">UP TO 50% OFF</h2>
+                <p className="text-sm md:text-lg mt-1">LIMITED TIME OFFER - SHOP NOW!</p>
+              </div>
+              <button className="bg-yellow-400 text-black px-6 py-2 rounded-full font-semibold">
+                Shop Now
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
